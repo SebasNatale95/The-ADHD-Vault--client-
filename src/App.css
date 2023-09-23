@@ -1,0 +1,27 @@
+/*------------------------------------------ Basic setup stuff */
+
+* {font-family: "Raleway"; margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+html {height: 100%; background: linear-gradient(125deg, #ff004c, #00ff73d7, #0077ff); background-size: 500% 800%; animation: bg 30s ease-in-out infinite;}
+
+/*------------------------------------------ Animations */
+
+@keyframes bg {0% {background-position: 50% 0%;} 15% {background-position: 10% 10%;} 25% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 65% {background-position: 85% 85%} 75% {background-position: 50% 100%} 100% {background-position: 50% 0%;}}
+@keyframes fadeIn {0% {opacity: 0%; transform: scale(0.9);} 100% {opacity: 100%; transform: scale(1);}}
+@keyframes fadeOut {0% {opacity: 0;} 100% {opacity: 1;}}
+@keyframes bounce {0% {transform: translateY(5px);} 100% {transform: translateY(0);}}
+
+/* This is the actual animated background */
+#bg_wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#bg_root {
+    width: 75%;
+    height: 85%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

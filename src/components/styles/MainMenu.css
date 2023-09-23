@@ -1,0 +1,66 @@
+#landing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 2s;
+}
+.dskBanner {
+    display: none;
+}
+.mblBanner {
+    display: block;
+    width: 90%;
+    max-width: 330px;
+    margin-bottom: -10%;
+}
+.bannerTxt {
+    font-size: 25px;
+    color: #daebff;
+}
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+}
+.buttons {
+    width: 130px;
+    height: 60px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(45deg, #f700ff, #1eff00d7, #ff4242); 
+    background-size: 500% 800%; 
+    animation: bg 20s ease-in-out infinite alternate-reverse;
+}
+.buttons:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+.buttons:active {
+    background-color: black;
+    color: rgb(54, 54, 54);
+    transform: scale(0.9);
+}
+
+@media (min-width: 540px) {
+    #landing {
+        justify-content: space-around;
+    }
+    .btnContainer {
+        flex-direction: row;
+        bottom: 15%;
+    }
+}
+@media (min-width: 768px) {
+    .dskBanner {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+    }
+    .mblBanner {
+        display: none;
+    }
+}
